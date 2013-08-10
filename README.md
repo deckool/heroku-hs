@@ -7,4 +7,4 @@ Why not go **All the way naked**
 
 working with git API, refs and SHA's
 
-![alt text](image.png "Logo Title Text 1")
+![alt text](london.jpg "Logo Title Text 1")
