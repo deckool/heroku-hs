@@ -11,11 +11,15 @@ working with git API, refs and SHA's
 
 That's some text with a footnote for discount.[^1]
 
+The whole page is written in Markdown, parsed by Discount in Html. The syntax is really on hand, in 3 days you get used to it.
+Use it. Like in Just do it
+
+	code goes here
+	i wrote mostly haskell Html and Css 
+
 This image is the most beautiful, the colors, the message. Love it [^2]
 
 ![The occult](occult.jpg)
-
-
 
 [^1]: And that's the footnote.
 [^2]: I don't remember the source.
