@@ -8,7 +8,7 @@ Sweat naked
 So you sweat naked, you *breathe* naked, you _eat_ naked.
 
 Ok, so for the last week i worked around haskellers `github` wrapper for Github API.
-This is just a __demo__ of what it may become. It also don't store all of the datas on Github but on an internal haskell server written using SnapFramework.
+This is just a __demo__ of what it may become. It also does not store all of the datas on Github but on an internal haskell server written using SnapFramework.
 
 Lots of people ask me about the CV and portofolio yet i did not heard one of them having also the option for a paid work test.
 I am born on my first day, followed school just like anybody else, 12 years + university, i worked, i also quit few times, i know this and that.
