@@ -3,6 +3,9 @@ Sweat naked
 
 So you sweat naked, you *breathe* naked, you _eat_ naked.
 
+Lots of people ask me about the CV and portofolio yet i did not heard one of them having also the option for a paid work test.
+I am born on my first day, followed school just like anybody else, 12 years + university, i worked, i also quit few times, i know this and that.
+
 Why not go **All the way naked**
 
 working with git API, refs and SHA's
