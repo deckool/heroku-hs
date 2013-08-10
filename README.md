@@ -1,9 +1,9 @@
 Sweat naked
 -----------
 
-	!important (as in css)
-	This app, not being connected to a server it won't be live. So, any change or comment added will be shown only after me, the human, will compile it.
-	Not for long anyway!
+>!important (as in css)
+>This app, not being connected to a server it won't be live. So, any change or comment added will be shown only after me, the human, will compile it.
+>Not for long anyway!
 
 So you sweat naked, you *breathe* naked, you _eat_ naked.
 
