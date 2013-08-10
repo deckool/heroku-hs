@@ -1,8 +1,10 @@
-This is an H2
--------------
+Sweat naked
+-----------
 
-And this is a new line
+So you sweat naked, you *breathe* naked, you _eat_ naked.
 
-small haskell app to be deployed over heroku
+Why not go **All the way naked**
 
-working with git API
+working with git API, refs and SHA's
+
+![alt text](image.png "Logo Title Text 1")
