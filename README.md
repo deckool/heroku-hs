@@ -9,6 +9,6 @@ working with git API, refs and SHA's
 
 ![alt text](london.jpg "Logo Title Text 1")
 
-ok, discount here will parse this as a footnote. [^1]
+That's some text with a footnote for discount.[^1]
 
-[^1]: Let us see where it will render. Curious? 
+[^1]: And that's the footnote.
