@@ -30,10 +30,12 @@ Use it. Like in Just do it
 
 	code goes here
 	i wrote mostly haskell Html and Css 
-
+<!---
 This image is the most beautiful, the colors, the message. Love it [^2]
+[^2]: I don't remember the source.
 
 ![The occult](occult.jpg)
+-->
 
 [^1]: And that's the footnote.
-[^2]: I don't remember the source.
+
