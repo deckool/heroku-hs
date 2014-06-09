@@ -37,5 +37,5 @@ This image is the most beautiful, the colors, the message. Love it [^2]
 ![The occult](occult.jpg)
 -->
 
-[^1]: And that's the footnote.
+[^1]: And that's the footnote
 
