@@ -19,7 +19,7 @@ I am born on my first day, followed school just like anybody else, 12 years + un
 
 Why not go **All the way naked**
 
-working with git API, refs and SHA's
+working with git API, refs and SHA's, now with webhooks
 
 ![alt text](london.jpg "Logo Title Text 1")
 
@@ -39,4 +39,3 @@ This image is the most beautiful, the colors, the message. Love it [^2]
 
 [^1]: And that's the footnote.
 
-0
