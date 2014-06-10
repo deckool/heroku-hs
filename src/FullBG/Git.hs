@@ -88,7 +88,7 @@ same s i = do
 --------
 
 raw = do
-    jpg <- N.simpleHttp "http://cdn.rawgit.com/deckool/heroku-hs/master/README.md"
+    jpg <- N.simpleHttp "https://raw.githubusercontent.com/deckool/heroku-hs/master/README.md"
     let issueNo = "https://github.com/deckool/heroku-hs/issues/" ++ (take 1 $ C.unpack jpg)
     let blob = drop 1 $ C.unpack jpg
     same blob issueNo

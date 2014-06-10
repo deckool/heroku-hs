@@ -11,6 +11,8 @@ The very first character in the md file must be the issue number. Here, it is si
 
 So you sweat naked, you *breathe* naked, you _eat_ naked.
 
+That's some text with a footnote for discount.[^1]
+
 Ok, so for the last week i worked around haskellers `github` wrapper for Github API.
 This is just a __demo__ of what it may become. It also does not store all of the datas on Github but on an internal haskell server written using SnapFramework.
 
@@ -22,8 +24,6 @@ Why not go **All the way naked**
 working with git API, refs and SHA's, now with webhooks
 
 ![alt text](london.jpg "Logo Title Text 1")
-
-That's some text with a footnote for discount.[^1]
 
 The whole page is written in Markdown, parsed by Discount in Html. The syntax is really on hand, in 3 days you get used to it.
 Use it. Like in Just do it
@@ -37,5 +37,5 @@ This image is the most beautiful, the colors, the message. Love it [^2]
 ![The occult](occult.jpg)
 -->
 
-[^1]: And that's the footnote
+[^1]: And that's the footnote. Any other footnote will just render here. It's a good use for explanation use.
 
