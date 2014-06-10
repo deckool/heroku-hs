@@ -1,0 +1,76 @@
+[25/Dec/2013:15:16:20 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:15:21:23 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:15:21:23 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:15:21:30 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:15:39:58 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:15:39:58 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:23:08 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:26:04 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:26:04 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:26:16 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:29:54 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:29:54 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:37:09 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:38:13 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:38:13 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:38:19 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:39:47 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:39:47 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:39:52 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:41:39 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:41:39 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:41:48 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:46:48 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:46:48 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:16:47:36 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:16:59:54 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:16:59:54 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:00:01 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:02:17 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:02:17 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:02:23 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:04:39 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:04:39 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:04:46 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:05:38 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:05:38 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:05:45 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:06:06 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:06:06 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:06:12 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:07:08 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:07:08 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:07:15 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:17:07:33 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:17:07:33 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:17:07:39 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:20:13:27 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:20:13:27 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:20:37:20 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:20:40:23 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:20:40:23 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:20:40:30 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:20:42:05 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:20:42:05 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:20:42:12 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:20:43:10 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:20:43:10 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:20:44:19 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:20:45:48 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:20:45:48 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:20:53:52 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:22:40:09 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:22:40:09 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:22:53:31 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:22:57:45 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:22:57:45 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:22:57:54 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:23:00:33 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:23:00:33 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:23:00:41 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:23:01:37 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:23:01:37 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:23:01:44 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]
+[25/Dec/2013:23:02:08 +0000] Server.httpServe: SHUTDOWN
+[25/Dec/2013:23:02:08 +0000] Server.httpServe: BACKEND STOPPED
+[25/Dec/2013:23:02:15 +0000] Server.httpServe: START, binding to [http://0.0.0.0:80/]

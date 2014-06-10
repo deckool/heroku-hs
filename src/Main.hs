@@ -1,14 +1,18 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
+import qualified FullBG.Git as G
 import           Control.Applicative
 import           Snap.Core
 import           Snap.Util.FileServe
 import           Snap.Http.Server
 import qualified Data.ByteString.Char8 as S
 import           Control.Monad.IO.Class
+import           Control.Monad
 import           System.Process
 import           Snap.Extras.JSON
+import Data.Aeson
+import qualified Data.ByteString.Lazy.Char8 as C
 
 main :: IO ()
 main = do
@@ -27,6 +31,8 @@ site =
           , ("/lol/", serveDirectory "../app")
           , ("/get", method Snap.Core.POST exist)
           , ("/set",  papam)
+          --, ("zein", zain)
+          , ("git", serveDirectory "FullBG")
           --, ("/js", serveDirectory "../semantic.gs")
           ] <|>
     dir "static" (serveDirectory ".")
@@ -42,10 +48,6 @@ xxx = do
    modifyResponse $ addHeader "Content-Type" "application/json; charset=UTF-8"
    modifyResponse $ addHeader "Server" "One"
    writeBS "{\"message\":\"hello world\",\"message1\":\"What's up world?\"}"
-   r <- fmap rspStatusReason getResponse
-   writeBS r
-   req <- fmap rqServerName getRequest
-   writeBS req
 
 exist :: Snap ()
 exist = do
@@ -55,11 +57,67 @@ exist = do
     reqPath <- fmap rqPathInfo getRequest
 --    modifyResponse $ addHeader "Content-Type" "text/html; charset=UTF-8"
     let no = S.concat told
-    let s = "{blah: blahbla}"
     liftIO $ S.writeFile "app.json" no
-    writeBS no
+    let z = C.pack $ S.unpack no
+    let f = commitList <$> decode z
+    case f of
+      Nothing -> liftIO $ print "Nothing"
+      Just ps -> do
+          let a = fmap author ps
+          let b = fmap username a
+          liftIO $ print b
+          --liftIO $ print a
+          liftIO $ G.raw
+    liftIO $ print f
 
 papam :: Snap()
 papam = do
   x <- liftIO $ S.readFile "app.json"
+  let z = C.pack $ S.unpack x
+  let xxx = commitList <$> decode z
+  --liftIO $ print xxx
+  case xxx of
+    Nothing -> liftIO $ print "Nothing"
+    Just ps -> do
+        let a = fmap author ps
+        let b = fmap username a
+        liftIO $ print b
+        --liftIO $ print a
+        liftIO $ G.raw
   writeBS x
+
+data Pula = Pula {after :: String} deriving (Show)
+
+instance FromJSON Pula where
+    parseJSON (Object o) = Pula <$> o .: "after"
+    parseJSON _ = mzero
+
+newtype CommitList = CommitList {commitList :: [Commit]}
+
+instance FromJSON CommitList where
+    parseJSON (Object o) = CommitList <$> o .: "commits"
+    parseJSON _ = mzero
+
+data Commit = Commit {ids :: String, message :: String, url :: String, modified :: [String], author :: Auth} deriving (Show)
+
+instance FromJSON Commit where
+    parseJSON (Object o) = Commit <$> o .: "id" <*> o .: "message" <*> o .: "url" <*> o .: "modified" <*> o .: "author"
+    parseJSON _ = mzero
+
+data Auth = Auth {name :: String, email :: String, username :: String} deriving (Show)
+
+instance FromJSON Auth where
+    parseJSON (Object o) = Auth <$> o .: "name" <*> o .: "email" <*> o .: "username"
+    parseJSON _ = mzero
+
+{--zain :: Snap()
+zain = do
+  let jso_n = "{\"total\":1,\"movies\":[ {\"id\":\"771315522\",\"zd\":\"771315522\",\"title\":\"Harry Potter and the Philosophers Stone (Wizard's Collection)\",\"posters\":{\"thumbnail\":\"http://content7.flixster.com/movie/11/16/66/11166609_mob.jpg\",\"profile\":\"http://content7.flixster.com/movie/11/16/66/11166609_pro.jpg\",\"detailed\":\"http://content7.flixster.com/movie/11/16/66/11166609_det.jpg\",\"original\":\"http://content7.flixster.com/movie/11/16/66/11166609_ori.jpg\"}}]}"
+  let xxx = movieList <$> decode jso_n
+  liftIO $ print xxx
+  case xxx of
+    Nothing -> liftIO $ print "Nothing"
+    Just ps -> do
+        let a = fmap zd ps
+        liftIO $ print a
+  writeLBS jso_n--}

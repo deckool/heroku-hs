@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>
+            fullBG
+        </title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script type="text/javascript" src="mootools-core-1.4.5.js"></script>
+        <script type="text/javascript">
+            
+//<![CDATA[ 
+window.addEvent('load', function() {
+var imgArray = ["AAL_010709-119975.jpg","toronto-computers-history-ibm-372640.jpg","DLS_019.jpg","CPH.jpg","ff_googleinfrastructure_large.jpg","123.jpg","T3_CPH.jpg"];
+var basePath="bgimgs/";
+
+function imgRandom() {
+{
+var rand = imgArray[Math.floor(Math.random() * imgArray.length)];
+var image = new Image();
+image.src = basePath+rand;
+document.body.appendChild(image);
+    }
+}
+
+imgRandom();
+});//]]>  
+</script>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <a href="/">
+            &lt;- Back to main
+        </a>
+        <div id="wrapper">
+            <h1>
+                Full background
+            </h1>
+        </div>
+    </body>
+</html>
