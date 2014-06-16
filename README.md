@@ -32,10 +32,9 @@ Use it. Like in Just do it
 	i wrote mostly haskell Html and Css 
 
 This image is the most beautiful, the colors, the message. Love it [^2]
-[^2]: I don't remember the source.
 
 ![The occult](occult.jpg)
 
 
 [^1]: And that's the footnote. Any other footnote will just render here. It's a good use for explanation use.
-
+[^2]: I don't remember the source.
