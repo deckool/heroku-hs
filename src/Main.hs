@@ -53,7 +53,6 @@ exist :: Snap ()
 exist = do
     action <- getsRequest $ getHeader "X-GitHub-Event"
     acti_on <- maybe pass return action
-    liftIO $ print acti_on
     fooParam <- getsRequest $ rqParam "payload"
     told <- maybe pass return fooParam
     test <- liftIO $ system "cd ~/dinx60/home/github/angular_views/src/; ./bin.sh"
@@ -64,7 +63,8 @@ exist = do
     let z = C.pack $ S.unpack no
     let f = commitList <$> decode z
     case f of
-      Nothing -> liftIO $ print "Nothing"
+      Nothing -> do
+          liftIO $ G.raw
       Just ps -> do
           let a = fmap author ps
           let b = fmap username a
