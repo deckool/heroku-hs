@@ -25,13 +25,13 @@ working with git API, refs and SHA's, now with webhooks
 
 ![alt text](london.jpg "Logo Title Text 1")
 
-The whole page is written in Markdown, parsed by Discount in Html. The syntax is really on hand, in 3 days you get used to it.
+The whole page is written in Markdown, parsed by Discount . in Html. The syntax is really on hand, in 3 days you get used to it.
 Use it. Like in Just do it
 
 	code goes here
 	i wrote mostly haskell Html and Css 
 
-This image is the most beautiful, the colors, the message. Love it [^2]
+This image is the most beautiful, the colors, the message. Love it
 
 ![The occult](occult.jpg)
 

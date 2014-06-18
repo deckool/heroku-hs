@@ -9,9 +9,9 @@ import qualified Text.Blaze.Html.Renderer.Pretty as P
 import qualified Data.ByteString.Lazy.Char8 as C
 import qualified Data.ByteString.Char8 as D
 import           System.Directory
-import           Data.Random
-import           Data.Random.Source.DevRandom
-import           Data.Random.Extras
+--import           Data.Random
+--import           Data.Random.Source.DevRandom
+--import           Data.Random.Extras
 import           Control.Monad
 import qualified Clay as Cl
 import           Snap.Blaze.Clay
@@ -64,7 +64,7 @@ draw string sndString comments z y click = docTypeHtml $ do
 same s i = do
     y <- getDirectoryContents "FullBG/bgimgs"
     let filtered = filter (not . (`elem` ["..", "."])) y
-    x <- runRVar (choice filtered) DevRandom
+--    x <- runRVar (choice filtered) DevRandom
     let js = "var strings="++(show filtered)++";var randomIndex=Math.floor(Math.random()*strings.length);var randomString=strings[randomIndex];var c=\"bgimgs/\";var e=new Image();e.src=(c+randomString);document.body.appendChild(e);"
     css <- readFile "FullBG/style.css"
     let clicky = "<script src=\"http://static.getclicky.com/js\" type=\"text/javascript\"></script><script type=\"text/javascript\">try{clicky.init(100687310);}catch(e){}</script><noscript><p><img alt=\"Clicky\" width=\"1\" height=\"1\" src=\"//in.getclicky.com/100687310ns.gif\"/></p></noscript>"

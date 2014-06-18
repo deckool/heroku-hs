@@ -10,7 +10,7 @@ import qualified Data.ByteString.Char8 as S
 import           Control.Monad.IO.Class
 import           Control.Monad
 import           System.Process
-import           Snap.Extras.JSON
+
 import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as C
 
@@ -47,7 +47,7 @@ xxx :: Snap ()
 xxx = do
    modifyResponse $ addHeader "Content-Type" "application/json; charset=UTF-8"
    modifyResponse $ addHeader "Server" "One"
-   writeBS "{\"message\":\"hello world\",\"message1\":\"What's up world?\"}"
+   writeBS "{\"message\":\"hello world\",\"route1\":\"/git will get you to a Github wrapper configured with webhooks\"}"
 
 exist :: Snap ()
 exist = do
