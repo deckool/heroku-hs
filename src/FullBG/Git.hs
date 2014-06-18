@@ -19,6 +19,7 @@ import qualified Github.Issues.Comments as Github
 import           Data.List (intercalate)
 import           Text.Discount
 import qualified Github.GitData.Blobs as Github
+import qualified Github.GitData.Readme as Github
 import           Codec.Binary.Base64.String
 import           Control.Monad.IO.Class
 import qualified Network.HTTP.Conduit as N
@@ -88,10 +89,17 @@ same s i = do
 --------
 
 raw = do
-    jpg <- N.simpleHttp "https://raw.githubusercontent.com/deckool/heroku-hs/master/README.md"
-    let issueNo = "https://github.com/deckool/heroku-hs/issues/" ++ (take 1 $ C.unpack jpg)
-    let blob = drop 1 $ C.unpack jpg
-    same blob issueNo
+    possibleRead <- Github.readme "deckool" "heroku-hs"
+--    print possibleBlob
+    case possibleRead of
+      (Left error) -> putStrLn $ "Error: " ++ (show error)
+--      (Right blob) -> putStrLn $ decode $ Github.blobContent blob
+      (Right x) -> do
+        let y = decode $ Github.readmeContent x
+        let issueNo = "https://github.com/deckool/heroku-hs/issues/" ++ (take 1 y)
+        let blob = drop 1 y
+        same blob issueNo
+    putStrLn ":)"
 
 formatComment comment =
     "<div class=\"comment\">" ++
