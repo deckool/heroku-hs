@@ -9,7 +9,7 @@ The very first character in the md file must be the issue number. Here, it is si
 >This app, now connected to a server it is live. So, any change or comment added will be shown only after the webhook, the api, will compile it.
 >Not for long anyway! There will be a lot of new features as days pass by.
 
-So you sweat naked, you *breathe* naked, you _eat_ naked.
+So you sweat naked, you *breathe* naked, you _eat_ naked wicked.
 
 That's some text with a footnote for discount.[^1]
 
