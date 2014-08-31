@@ -22,7 +22,7 @@ import qualified Github.GitData.Blobs as Github
 import qualified Github.GitData.Readme as Github
 import           Codec.Binary.Base64.String
 import           Control.Monad.IO.Class
-import qualified Network.HTTP.Conduit as N
+--import qualified Network.HTTP.Conduit as N
 
 
 

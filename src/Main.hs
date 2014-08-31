@@ -82,9 +82,15 @@ papam = do
   case xxx of
     Nothing -> liftIO $ print "Nothing"
     Just ps -> do
+        liftIO $ print ps
         let a = fmap author ps
         let b = fmap username a
+        let c = concatMap modified ps
+        --case c of
+        --  [Just x] -> liftIO $ print x
         liftIO $ print b
+        --let z =  take 1 c
+        liftIO $ print $ filter (`elem` ["src/FullBG/index.html"]) c
         --liftIO $ print a
         liftIO $ G.raw
   writeBS x
