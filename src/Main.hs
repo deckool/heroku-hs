@@ -11,6 +11,8 @@ import           Control.Monad.IO.Class
 import           Control.Monad
 import           System.Process
 
+import           System.Directory
+
 import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as C
 
@@ -55,10 +57,14 @@ exist = do
     acti_on <- maybe pass return action
     fooParam <- getsRequest $ rqParam "payload"
     told <- maybe pass return fooParam
-    test <- liftIO $ system "cd ~/dinx60/home/github/angular_views/src/; ./bin.sh"
+    --test <- liftIO $ system "cd ~/dinx60/home/github/angular_views/src/; ./bin.sh"
+    --liftIO $ print test
     reqPath <- fmap rqPathInfo getRequest
 --    modifyResponse $ addHeader "Content-Type" "text/html; charset=UTF-8"
     let no = S.concat told
+    y <- liftIO $ getDirectoryContents "."
+    let y1 = concat y
+    liftIO $ print y1
     liftIO $ S.writeFile "app.json" no
     let z = C.pack $ S.unpack no
     let f = commitList <$> decode z
@@ -76,9 +82,11 @@ exist = do
 papam :: Snap()
 papam = do
   x <- liftIO $ S.readFile "app.json"
+  liftIO $ print x
   let z = C.pack $ S.unpack x
+  liftIO $ print z
   let xxx = commitList <$> decode z
-  --liftIO $ print xxx
+  liftIO $ print xxx
   case xxx of
     Nothing -> liftIO $ print "Nothing"
     Just ps -> do
@@ -90,7 +98,7 @@ papam = do
         --  [Just x] -> liftIO $ print x
         liftIO $ print b
         --let z =  take 1 c
-        liftIO $ print $ filter (`elem` ["src/FullBG/index.html"]) c
+        liftIO $ print $ filter (`elem` [""]) c
         --liftIO $ print a
         liftIO $ G.raw
   writeBS x
