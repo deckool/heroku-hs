@@ -76,7 +76,9 @@ exist = do
 papam :: Snap()
 papam = do
   x <- liftIO $ S.readFile "app.json"
+  liftIO $ print x
   let z = C.pack $ S.unpack x
+  liftIO $ print z
   let xxx = commitList <$> decode z
   --liftIO $ print xxx
   case xxx of
