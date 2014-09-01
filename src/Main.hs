@@ -15,6 +15,7 @@ import           System.Directory
 
 import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as C
+import qualified Data.ByteString.Lazy as B
 
 main :: IO ()
 main = do
@@ -81,11 +82,11 @@ exist = do
 
 papam :: Snap()
 papam = do
-  x <- liftIO $ S.readFile "app.json"
+  x <- liftIO $ B.readFile "app.json"
   liftIO $ print x
-  let z = C.pack $ S.unpack x
-  liftIO $ print z
-  let xxx = commitList <$> decode z
+  --let z = C.pack $ S.unpack x
+  --liftIO $ print z
+  let xxx = commitList <$> decode x
   liftIO $ print xxx
   case xxx of
     Nothing -> liftIO $ print "Nothing"
@@ -101,7 +102,7 @@ papam = do
         liftIO $ print $ filter (`elem` [""]) c
         --liftIO $ print a
         liftIO $ G.raw
-  writeBS x
+  writeLBS x
 
 data Pula = Pula {after :: String} deriving (Show)
 
