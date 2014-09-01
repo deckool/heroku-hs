@@ -13,9 +13,15 @@ import           System.Process
 
 import           System.Directory
 
-import Data.Aeson
+import           Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as C
 import qualified Data.ByteString.Lazy as B
+
+
+import           OpenSSL               (withOpenSSL)
+import           Network.Http.Client
+
+import qualified Network.HTTP.Conduit as N
 
 main :: IO ()
 main = do
@@ -34,6 +40,7 @@ site =
           , ("/lol/", serveDirectory "../app")
           , ("/get", method Snap.Core.POST exist)
           , ("/set",  papam)
+          , ("/am", tadam)
           --, ("zein", zain)
           , ("git", serveDirectory "FullBG")
           --, ("/js", serveDirectory "../semantic.gs")
@@ -54,7 +61,7 @@ xxx = do
 
 exist :: Snap ()
 exist = do
-    action <- getsRequest $ getHeader "X-GitHub-Event"
+    action <- getsRequest $ Snap.Core.getHeader "X-GitHub-Event"
     acti_on <- maybe pass return action
     fooParam <- getsRequest $ rqParam "payload"
     told <- maybe pass return fooParam
@@ -79,6 +86,12 @@ exist = do
           --liftIO $ print a
           --liftIO $ G.raw
     liftIO $ print f
+
+tadam :: Snap()
+tadam = do
+    user <- N.simpleHttp "https://api.github.com/repos/deckool/heroku-hs/contents/http.cabal"
+    writeLBS user
+
 
 papam :: Snap()
 papam = do
