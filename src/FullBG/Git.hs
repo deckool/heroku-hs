@@ -15,14 +15,14 @@ import           System.Directory
 import           Control.Monad
 import qualified Clay as Cl
 import           Snap.Blaze.Clay
-import qualified Github.Issues.Comments as Github
+--import qualified Github.Issues.Comments as Github
 import           Data.List (intercalate)
 import           Text.Discount
-import qualified Github.GitData.Blobs as Github
-import qualified Github.GitData.Readme as Github
+--import qualified Github.GitData.Blobs as Github
+--import qualified Github.GitData.Readme as Github
 import           Codec.Binary.Base64.String
 import           Control.Monad.IO.Class
---import qualified Network.HTTP.Conduit as N
+import qualified Network.HTTP.Conduit as N
 
 
 
@@ -61,7 +61,7 @@ draw string sndString comments z y click = docTypeHtml $ do
         script ! type_ "text/javascript" $ (toHtml sndString)
         (preEscapedToHtml click)
 
-
+{--
 same s i = do
     y <- getDirectoryContents "FullBG/bgimgs"
     let filtered = filter (not . (`elem` ["..", "."])) y
@@ -76,6 +76,7 @@ same s i = do
          (Right issues) -> do
              let issuesComments = intercalate "" $ Prelude.map formatComment issues
              C.writeFile "FullBG/index.html" $ C.pack $ P.renderHtml $ draw css js issuesComments s i clicky
+--}
 
 --flame = do
 --  possibleBlob <- Github.blob "deckool" "heroku-hs" "6cbf346f11b05efe4c889705e937fa0c6b01faa6"
@@ -89,7 +90,10 @@ same s i = do
 --------
 
 raw = do
+    print "this is raw"
+{--
     possibleRead <- Github.readme "deckool" "heroku-hs"
+}
 --    print possibleBlob
     case possibleRead of
       (Left error) -> putStrLn $ "Error: " ++ (show error)
@@ -100,7 +104,8 @@ raw = do
         let blob = drop 1 y
         same blob issueNo
     putStrLn ":)"
-
+--}
+{--
 formatComment comment =
     "<div class=\"comment\">" ++
     "<img class=\"avatar\" src=\"" ++ avatar ++"\"height=\"50\" width=\"50\">" ++
@@ -112,6 +117,7 @@ formatComment comment =
         name = Github.githubOwnerLogin $ Github.issueCommentUser comment
         date = show $ Github.fromGithubDate $ Github.issueCommentUpdatedAt comment
         comBody = Github.issueCommentBody comment
+--}
 
 -- it seems her is hard to find , i guess i'll stick with him for some time :))
 -------------------------------------------------------------------------------------------------
