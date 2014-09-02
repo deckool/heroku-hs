@@ -23,6 +23,8 @@ import           Network.Http.Client
 
 import qualified Network.HTTP.Conduit as N
 
+import           Network.HTTP.Headers
+
 main :: IO ()
 main = do
     httpServe (setPort 8000 config) site
@@ -89,8 +91,11 @@ exist = do
 
 tadam :: Snap()
 tadam = do
-    user <- N.simpleHttp "https://api.github.com/repos/deckool/heroku-hs/contents/http.cabal"
-    writeLBS user
+    req <- parse "https://api.github.com/repos/deckool/heroku-hs/contents/http.cabal"
+    let request = req { N.requestHeaders = [customHeader] }
+    let custom_header = mkHeader (HdrCustom "User-Agent") "Awesome-Octocat-App"
+    --user <- N.simpleHttp "https://api.github.com/repos/deckool/heroku-hs/contents/http.cabal"
+    writeLBS req
 
 
 papam :: Snap()
