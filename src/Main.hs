@@ -93,7 +93,7 @@ exist = do
 
 tadam :: Snap()
 tadam = do
-    xxy <- liftIO $ FC.main "src/https_try.hs"
+    xxy <- liftIO $ FC.main "src/doi.hs"
     let u = S.pack xxy
     liftIO $ print u
     writeBS u
