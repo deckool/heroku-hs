@@ -88,7 +88,7 @@ exist = do
           let b = fmap username a
           liftIO $ print b
           --liftIO $ print a
-          --liftIO $ G.raw
+          liftIO $ G.raw
     liftIO $ print f
 
 tadam :: Snap()
