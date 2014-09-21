@@ -22,6 +22,8 @@ import           OpenSSL               (withOpenSSL)
 import           Network.Http.Client
 
 import qualified Network.HTTP.Conduit as N
+import Network.HTTP.Headers
+import Control.Monad.Trans.Resource
 
 main :: IO ()
 main = do
@@ -87,11 +89,21 @@ exist = do
           --liftIO $ G.raw
     liftIO $ print f
 
+check = do
+    let args = "https://api.github.com/repos/deckool/heroku-hs/collaborators"
+    case N.parseUrl args of
+        Nothing -> print "Sorry, invalid URL"
+        Just req -> runResourceT $ N.withManager $ \manager -> do
+            let custom_header = ("user-agent", "x")
+            let reqHead = req { N.requestHeaders = [custom_header] }
+            res <- N.httpLbs reqHead manager
+            let jsonresponse = N.responseBody res
+            liftIO $ B.writeFile "zzz.json" jsonresponse
+
 tadam :: Snap()
 tadam = do
-    user <- N.simpleHttp "https://api.github.com/repos/deckool/heroku-hs/contents/http.cabal"
-    writeLBS user
-
+  x <- liftIO $ B.readFile "zzz.json"
+  writeLBS x
 
 papam :: Snap()
 papam = do
