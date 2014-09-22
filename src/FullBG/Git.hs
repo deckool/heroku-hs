@@ -15,11 +15,11 @@ import           System.Directory
 import           Control.Monad
 import qualified Clay as Cl
 import           Snap.Blaze.Clay
---import qualified Github.Issues.Comments as Github
+import qualified Github.Issues.Comments as Github
 import           Data.List (intercalate)
 import           Text.Discount
---import qualified Github.GitData.Blobs as Github
---import qualified Github.GitData.Readme as Github
+import qualified Github.GitData.Blobs as Github
+import qualified Github.GitData.Readme as Github
 import           Codec.Binary.Base64.String
 import           Control.Monad.IO.Class
 import qualified Network.HTTP.Conduit as N

@@ -25,6 +25,10 @@ import qualified Network.HTTP.Conduit as N
 import Network.HTTP.Headers
 import Control.Monad.Trans.Resource
 
+import           Network.HTTP.Headers
+
+import qualified FileContent as FC
+
 main :: IO ()
 main = do
     httpServe (setPort 8000 config) site
@@ -86,7 +90,7 @@ exist = do
           let b = fmap username a
           liftIO $ print b
           --liftIO $ print a
-          --liftIO $ G.raw
+          liftIO $ G.raw
     liftIO $ print f
 
 check = do
@@ -102,8 +106,16 @@ check = do
 
 tadam :: Snap()
 tadam = do
+<<<<<<< HEAD
   x <- liftIO $ B.readFile "zzz.json"
   writeLBS x
+=======
+    xxy <- liftIO $ FC.main "src/doi.hs"
+    let u = S.pack xxy
+    liftIO $ print u
+    writeBS u
+
+>>>>>>> 110f2f35b2564dd4fcfe824402ee84d09d90e9f3
 
 papam :: Snap()
 papam = do
