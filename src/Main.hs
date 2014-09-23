@@ -106,16 +106,10 @@ check = do
 
 tadam :: Snap()
 tadam = do
-<<<<<<< HEAD
-  x <- liftIO $ B.readFile "zzz.json"
-  writeLBS x
-=======
     xxy <- liftIO $ FC.main "src/doi.hs"
     let u = S.pack xxy
     liftIO $ print u
     writeBS u
-
->>>>>>> 110f2f35b2564dd4fcfe824402ee84d09d90e9f3
 
 papam :: Snap()
 papam = do
