@@ -22,14 +22,27 @@ main a = do
   response <- withManager $ httpLbs req'
   path_ response
 
+second = do
+  let uri = "https://api.github.com/repos/deckool/heroku-hs/collaborators"
+  initReq <- parseUrl uri
+  let custom_header = ("User-agent", "cat")
+  let req' = initReq { secure = True,requestHeaders = [custom_header] } -- Turn on https
+{--  let req = (flip urlEncodedBody) req' $
+             [ ("longUrl", "http://www.google.com/")
+  --           ,
+             ]--}
+  print req'
+  response <- withManager $ httpLbs req'
+  print $ responseBody response
+--  path_ response
 
 path_ a = do
   let yyy = responseBody a
-  let xxx = path <$> decode yyy
+  let xxx = content <$> decode yyy
   case xxx of
     Just z -> do
     	--writeFile "decoded.json" $ B64.decode z
-    	return z
+    	return $ B64.decode z
     Nothing -> return "nada"
 
 {--f a = do
